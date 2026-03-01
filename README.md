@@ -28,18 +28,17 @@ CS2 Font Changer allows you to customize your Counter-Strike 2 gaming experience
 - 🎨 **Complete Font Integration** - Changes all in-game text elements
 - 🛡️ **Safe & Reversible** - Easy restoration of default fonts
 - 💻 **Lightweight** - Minimal system resource usage
-- 🌐 **Dual Language** - Supports English and Chinese interfaces
+- 🌐 **Auto Language** - Automatically switches between English and Chinese based on your system language
 
 ## 📥 Download
 
 <p align="center">
-    <a href="https://github.com/Cairl/CS2-Font-Changer/releases/latest/download/en_US.exe"><img src="https://img.shields.io/badge/Download-English%20Version-blue?style=for-the-badge&logo=windows" alt="Download English Version"></a>　　
-    <a href="https://github.com/Cairl/CS2-Font-Changer/releases/latest/download/zh_CN.exe"><img src="https://img.shields.io/badge/Download-Chinese%20Version-green?style=for-the-badge&logo=windows" alt="Download Chinese Version"></a>
+    <a href="https://github.com/Cairl/CS2-Font-Changer/releases/latest/download/CS2_Font_Changer.exe"><img src="https://img.shields.io/badge/Download-Latest%20Version-blue?style=for-the-badge&logo=windows" alt="Download Latest Version"></a>
 </p>
 
 ## 🚀 Quick Start
 
-1. Download the version in your preferred language
+1. Download the latest version
 2. Prepare your `.ttf` or `.otf` font file
 3. Drag & drop the font file onto the executable
 4. Follow the on-screen instructions
