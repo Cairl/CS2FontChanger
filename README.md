@@ -28,17 +28,18 @@ CS2 Font Changer allows you to customize your Counter-Strike 2 gaming experience
 - 🎨 **Complete Font Integration** - Changes all in-game text elements
 - 🛡️ **Safe & Reversible** - Easy restoration of default fonts
 - 💻 **Lightweight** - Minimal system resource usage
-- 🌐 **Auto Language** - Automatically switches between English and Chinese based on your system language
+- 🌐 **Smart Language Detection** - Automatically switches between English and Chinese based on system locale
+- ⚙️ **Developer Mode** - Manual language override for testing
 
 ## 📥 Download
 
 <p align="center">
-    <a href="https://github.com/Cairl/CS2-Font-Changer/releases/latest/download/CS2_Font_Changer.exe"><img src="https://img.shields.io/badge/Download-Latest%20Version-blue?style=for-the-badge&logo=windows" alt="Download Latest Version"></a>
+    <a href="https://github.com/Cairl/CS2-Font-Changer/releases/latest/download/cs2_font_changer.exe"><img src="https://img.shields.io/badge/Download-Latest%20Version-blue?style=for-the-badge&logo=windows" alt="Download Latest Version"></a>
 </p>
 
 ## 🚀 Quick Start
 
-1. Download the latest version
+1. Download the executable
 2. Prepare your `.ttf` or `.otf` font file
 3. Drag & drop the font file onto the executable
 4. Follow the on-screen instructions
@@ -54,6 +55,20 @@ CS2 Font Changer allows you to customize your Counter-Strike 2 gaming experience
 ![en - 4](https://github.com/user-attachments/assets/56ffc199-2a29-4c8c-92e9-db101d4b6bf7)
 ![en - 5](https://github.com/user-attachments/assets/2a3f0ca8-9d66-4b80-a35f-ab4e8a7405d3)
 ![en - 6](https://github.com/user-attachments/assets/e013f9dd-1e24-4d6a-a281-d79cba4aea72)
+
+## 🔧 Advanced Usage
+
+### Developer Language Override
+
+For developers testing different language interfaces, you can manually set the language in the source code:
+
+```python
+language = 'auto'  # Options: 'auto', 'en', 'zh'
+```
+
+- `auto` - Automatically detect system language (default)
+- `en` - Force English interface
+- `zh` - Force Chinese interface
 
 ## ⚠️ Important Notes
 
@@ -74,6 +89,27 @@ Your contributions make this project better! Feel free to:
 - Star this repository
 - Open issues for bugs or suggestions
 - Submit pull requests
+
+## 📋 Changelog
+
+### v3.1 - Latest
+- ✨ Smart language detection based on system locale
+- 🎨 Improved UI with numbered menu options
+- 🌐 Unified bilingual support in single executable
+- ⚙️ Developer mode for manual language override
+
+### v3.0
+- Complete UI redesign
+- Added backup and restore functionality
+- Enhanced error handling
+
+### v2.x
+- Core functionality improvements
+- Better font compatibility
+
+### v1.x
+- Initial release
+- Basic font replacement features
 
 <div align="center">
     <br/>

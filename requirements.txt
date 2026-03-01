@@ -1,2 +1,1 @@
-fontTools>=4.0.0
-pywin32>=306
+fontTools>=4.44.0
