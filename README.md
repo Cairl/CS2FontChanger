@@ -23,13 +23,11 @@ CS2 Font Changer allows you to customize your Counter-Strike 2 gaming experience
 
 ## ⭐ Key Features
 
-- 🎯 **No Installation** - Just drag and drop your font file to use
-- 🔍 **Auto-Detection** - Smart CS2 installation path finding
-- 🎨 **Complete Font Integration** - Changes all in-game text elements
-- 🛡️ **Safe & Reversible** - Easy restoration of default fonts
-- 💻 **Lightweight** - Minimal system resource usage
-- 🌐 **Smart Language Detection** - Automatically switches between English and Chinese based on system locale
-- ⚙️ **Developer Mode** - Manual language override for testing
+- 🎯 **Simple & Easy** - Drag and drop font files to start after download
+- 🔍 **Smart Detection** - Automatically locates game installation path and handles font file naming
+- 🎨 **Full Integration** - Customize all in-game text elements with adjustable font sizes
+- 🛡️ **Safe & Reversible** - Auto-backup on first run, restore default fonts anytime
+- 🌐 **Bilingual Support** - Automatically switches between Chinese/English interface based on system language
 
 ## 📥 Download
 
