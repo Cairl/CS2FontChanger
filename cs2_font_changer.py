@@ -17,12 +17,20 @@ language = 'auto'  # Language configuration: auto, en, zh
 def get_system_language():
     """Detect system language, return 'zh' for Simplified Chinese, 'en' for others"""
     try:
-        windows_locale = locale.getlocale()[0]
-        if windows_locale and (windows_locale.startswith('zh_CN') or windows_locale.startswith('zh_SG')):
+        import ctypes
+        lang_id = ctypes.windll.kernel32.GetUserDefaultUILanguage()
+        # 0x0804 = zh-CN, 0x1004 = zh-SG, 0x0C04 = zh-HK, 0x1404 = zh-MO, 0x0404 = zh-TW
+        if lang_id in (0x0804, 0x1004, 0x0C04, 0x1404, 0x0404):
             return 'zh'
         return 'en'
     except Exception:
-        return 'en'
+        try:
+            windows_locale = locale.getlocale()[0]
+            if windows_locale and ('zh' in windows_locale.lower() or 'chinese' in windows_locale.lower()):
+                return 'zh'
+            return 'en'
+        except Exception:
+            return 'en'
 
 LANG = 'zh' if language == 'zh' else ('en' if language == 'en' else get_system_language())
 
@@ -73,7 +81,7 @@ MESSAGES = {
         'removing_ttf': '正在移除冲突的旧字体文件：{file}',
         'removing_ttf_failed': '移除旧字体文件失败：{file}',
         'restore_complete': '还原完成',
-        'restore_default': '按 [\033[92m0\033[0m] 恢复默认字体，注意：程序首次运行时会在游戏根目录自动创建恢复文件，恢复操作需要该文件存在',
+        'restore_default': '恢复默认字体，注意: \033[90m程序首次运行时会在游戏根目录自动创建恢复文件，恢复操作需要该文件存在\033[0m',
         'restore_error': '还原失败',
         'restore_failed_menu': '还原失败，按回车键返回主菜单尝试手动处理',
         'restore_file': '恢复文件',
@@ -141,7 +149,7 @@ MESSAGES = {
         'removing_ttf': 'Removing conflicting legacy font: {file}',
         'removing_ttf_failed': 'Failed to remove legacy font: {file}',
         'restore_complete': 'Restore complete',
-        'restore_default': 'Press [\033[92m0\033[0m] to restore default fonts, Note: A restoration file is automatically created in the game root during the first run, and restoration requires this file to exist',
+        'restore_default': 'Restore default fonts, Note: \033[90mA restoration file is automatically created in the game root during the first run, and restoration requires this file to exist\033[0m',
         'restore_error': 'Restore failed',
         'restore_failed_menu': 'Restoration failed, Press Enter to return to main menu and try manually',
         'restore_file': 'Restoration File',
