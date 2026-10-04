@@ -42,6 +42,16 @@ CS2 Font Changer allows you to easily customize the font display in Counter-Stri
 3. Drag and drop font files onto the program icon, or follow the interface prompts to import after launching
 4. Press [Enter] to apply and enjoy your new game fonts!
 
+## 🛠️ Build from Source
+
+Requires [Rust](https://rustup.rs/) 1.70+ (Windows only):
+
+```bash
+cargo build --release
+```
+
+The single-file executable will be at `target/release/cs2_font_changer.exe` (~350 KB, no runtime dependencies).
+
 ## 📸 Screenshots
 
 > **Note**: The font used in the demo is from [Chill Bitmap](https://github.com/Warren2060/ChillBitmap)
