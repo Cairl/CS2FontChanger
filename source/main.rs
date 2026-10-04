@@ -142,6 +142,10 @@ fn main() {
     // Drag-and-drop handling
     if let Some(ref f) = input_file {
         if Path::new(f).is_file() {
+            // Strip MOTW so the user doesn't get a Windows security prompt for this font
+            // every time they launch the program with it.
+            crate::font::unblock_file(f);
+
             let basename = Path::new(f)
                 .file_name()
                 .map(|s| s.to_string_lossy().to_lowercase())

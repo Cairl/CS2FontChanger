@@ -128,3 +128,18 @@ pub fn xml_escape(s: &str) -> String {
     }
     out
 }
+
+/// Strip the "Mark of the Web" (Zone.Identifier NTFS alternate stream) from a file.
+///
+/// When a font is dragged onto the exe, Windows shows a security warning for any
+/// file still carrying the Internet-zone marker. Deleting the `Zone.Identifier`
+/// stream is exactly what the "Unblock" checkbox in the file's Properties dialog
+/// does; we do it silently on the file we were just given so the user isn't
+/// prompted every time they drag a downloaded font onto the program.
+///
+/// Failures (no such stream, read-only file, permissions) are intentionally
+/// swallowed — the drag still works, the user just sees the Windows prompt.
+pub fn unblock_file(path: &str) {
+    let zone_stream = format!("{}:Zone.Identifier", path);
+    let _ = fs::remove_file(zone_stream);
+}
